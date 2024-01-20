@@ -1,0 +1,12 @@
+Hours=1
+Minutes=2
+HoursText=3
+Seperator=4
+AM=5
+PM=6
+MidnightNoon=7
+Until=8
+WS=9
+':'=4
+'-'=8
+' '=9

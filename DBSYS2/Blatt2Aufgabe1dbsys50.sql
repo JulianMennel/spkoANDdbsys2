@@ -1,0 +1,7 @@
+SELECT * FROM dbsys53.MYSELF;
+
+SELECT * FROM dbsys53.MYPERS;
+
+UPDATE dbsys53.MYSELF SET gehalt = 200000;
+
+UPDATE dbsys53.MYPERS SET gehalt = 200000 WHERE Name = 'Schmidt';

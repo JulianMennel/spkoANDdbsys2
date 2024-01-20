@@ -1,0 +1,21 @@
+// htmlnotenspiegel.stg
+//delimiters "$", "$"
+
+notenspiegel(n) ::= <<
+<html>
+<body>
+<b>NOTENSPIEGEL</b>
+<table>
+$n:fachnote(); separator="\n"$
+</table>
+</body>
+</html>
+>>
+
+fachnote(f) ::= <<
+<tr>
+<td>$f.fach$</td>
+<td>$if(f.benotet)$L$else$S$endif$</td>
+<td>$f.note$</td>
+</tr>
+>>

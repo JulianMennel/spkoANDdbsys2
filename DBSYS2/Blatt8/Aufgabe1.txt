@@ -1,0 +1,64 @@
+a)
+db.auftrag.find({
+  "jahr": 2021,
+  "beschreibung": {
+    $in: ["Entwicklung Onlineshop", "Installation Webserver"]
+  }
+})
+
+b)
+db.auftrag.find({
+    "jahr": 2021},
+    {"_id":0, "beschreibung":1})
+	
+c)
+db.kunde.find({
+    "auftraege.kosten": {$gte:5000}
+    },
+    {"_id":0, "name":1})
+	
+d)
+db.kunde.findOne({
+  "auftraege.details.$id": db.auftrag.findOne({ "auftragsnummer": auftragsnummer })._id
+}, {
+  "_id": 0,
+  "name": 1
+})
+
+e)
+db.kunde.aggregate([
+    {
+    $unwind: "$auftraege"
+    },
+    { $group: {
+        "_id": "$name",
+        gesamtkosten: { $sum: "$auftraege.kosten"}
+        }
+    }
+    ])
+	
+f)
+db.auftrag.aggregate([
+    { 
+        $match: { "beschreibung": "Entwicklung Onlineshop"}
+    },
+    { 
+        $group: {
+            "_id": "$jahr",
+            gesamtkosten: { $sum: "$kosten"}
+        }
+    }
+])
+
+g)
+db.auftrag.aggregate([
+    { 
+        $match: { "jahr": 2021}
+    },
+    { 
+        $group: {
+            "_id": "$beschreibung",
+            gesamtkosten: { $sum: "$kosten"}
+        }
+    }
+])

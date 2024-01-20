@@ -1,0 +1,54 @@
+INSERT INTO FILIALE VALUES (1,'Müller','München','Müncherbezirk','Deutschland');
+INSERT INTO FILIALE VALUES (2,'Holger','München','Müncheredelbezirk','Deutschland');
+INSERT INTO FILIALE VALUES (3,'Gustav','Stuttgart','Feuerbach','Deutschland');
+INSERT INTO FILIALE VALUES (4,'Kabak','Singen','Konstanz','Deutschland');
+INSERT INTO FILIALE VALUES (5,'Mennel','Konstanz','Wollmatingen','Deutschland');
+INSERT INTO FILIALE VALUES (6,'Reiner','München','Müncherbezirk2','Deutschland');
+INSERT INTO FILIALE VALUES (7,'Simsek','Konstanz','Paradies','Deutschland');
+INSERT INTO FILIALE VALUES (8,'Meier','Berlin','Tempelhof','Deutschland');
+INSERT INTO FILIALE VALUES (9,'Eck','Berlin','Kreuzberg','Deutschland');
+INSERT INTO FILIALE VALUES (10,'Montana','Maltastadt','Maltabezirk','Malta');
+
+INSERT INTO KUNDE VALUES (1,'Schneider',25,'Berlin','Tempelhof','Deutschland');
+INSERT INTO KUNDE VALUES (2,'Reiner',35,'Berlin','Kreuzberg','Deutschland');
+INSERT INTO KUNDE VALUES (3,'Meyer',42,'Konstanz','Paradies','Deutschland');
+INSERT INTO KUNDE VALUES (4,'Schmidt',32,'Konstanz','Wollmatingen','Deutschland');
+INSERT INTO KUNDE VALUES (5,'Fischer',39,'München','Münchenerbezirk','Deutschland');
+INSERT INTO KUNDE VALUES (6,'Wagner',18,'Stuttgart','Feuerbach','Deutschland');
+INSERT INTO KUNDE VALUES (7,'Becker',22,'Buxtehude','Nord','Deutschland');
+INSERT INTO KUNDE VALUES (8,'Weber',45,'Porto','Portooolo','Portugal');
+INSERT INTO KUNDE VALUES (9,'Richter',55,'Bodrum','Akyarlar','Türkei');
+INSERT INTO KUNDE VALUES (10,'Schulz',59,'Berlin','Tempelhof','Deutschland');
+
+INSERT INTO PRODUKT VALUES (1,'Bett','Schlafzimmer','Schlaferinoo',530,'Stuttgart','Feuerbach','Deutschland');
+INSERT INTO PRODUKT VALUES (2,'Schrank','Schlafzimmer','Schlaferinoo',280,'Stuttgart','Feuerbach','Deutschland');
+INSERT INTO PRODUKT VALUES (3,'Nachttischlampe','Schlafzimmer','Schlaferinoo',45,'Stuttgart','Feuerbach','Deutschland');
+INSERT INTO PRODUKT VALUES (4,'Herd','Küche','KüchenmarktXY',380,'Konstanz','Industriegebiet','Deutschland');
+INSERT INTO PRODUKT VALUES (5,'Kühlschrank','Küche','KüchenmarktXY',810,'Konstanz','Industriegebiet','Deutschland');
+INSERT INTO PRODUKT VALUES (6,'Backofen','Küche','KüchenmarktXY',420,'Konstanz','Industriegebiet','Deutschland');
+INSERT INTO PRODUKT VALUES (7,'Fernseher','Elektronik','ChinaMarketplace',888,'Peking','Pekindo','China');
+INSERT INTO PRODUKT VALUES (8,'Sofa','Wohnzimmer','IKEA',1530,'Ulm','UlmUlm','Deutschland');
+INSERT INTO PRODUKT VALUES (9,'Wohnzimmertisch','Wohnzimmer','IKEA',330,'Ulm','UlmUlm','Deutschland');
+INSERT INTO PRODUKT VALUES (10,'Teppich','Textilien','IKEA',230,'Ulm','UlmUlm','Deutschland');
+
+INSERT INTO VERKAEUFER VALUES (1,'Zuckerberg',TO_DATE('17/12/1990', 'DD/MM/YYYY'),'Elektronik');
+INSERT INTO VERKAEUFER VALUES (2,'Dimitri',TO_DATE('07/10/1990', 'DD/MM/YYYY'),'Elektronik');
+INSERT INTO VERKAEUFER VALUES (3,'Schmidt',TO_DATE('03/02/1988', 'DD/MM/YYYY'),'Möbel');
+INSERT INTO VERKAEUFER VALUES (4,'Winter',TO_DATE('13/02/1890', 'DD/MM/YYYY'),'Küche');
+INSERT INTO VERKAEUFER VALUES (5,'Sommer',TO_DATE('17/12/1990', 'DD/MM/YYYY'),'Schlafzimmer');
+INSERT INTO VERKAEUFER VALUES (6,'Herbst',TO_DATE('07/11/1960', 'DD/MM/YYYY'),'Elektronik');
+INSERT INTO VERKAEUFER VALUES (7,'Frühling',TO_DATE('18/06/2001', 'DD/MM/YYYY'),'Möbel');
+INSERT INTO VERKAEUFER VALUES (8,'Zuckerberg',TO_DATE('18/12/1990', 'DD/MM/YYYY'),'Küche');
+INSERT INTO VERKAEUFER VALUES (9,'Richter',TO_DATE('04/08/1940', 'DD/MM/YYYY'),'Elektronik');
+INSERT INTO VERKAEUFER VALUES (10,'Wagner',TO_DATE('28/12/1996', 'DD/MM/YYYY'),'Elektronik');
+
+INSERT INTO VERKAUF VALUES (1,5,TO_DATE('28/12/2022', 'DD/MM/YYYY'),1,2,3,4);
+INSERT INTO VERKAUF VALUES (2,3,TO_DATE('22/11/2022', 'DD/MM/YYYY'),4,6,9,1);
+INSERT INTO VERKAUF VALUES (3,4,TO_DATE('23/10/2021', 'DD/MM/YYYY'),5,3,10,6);
+INSERT INTO VERKAUF VALUES (4,19,TO_DATE('19/12/2020', 'DD/MM/YYYY'),8,5,3,4);
+INSERT INTO VERKAUF VALUES (5,80,TO_DATE('22/01/2021', 'DD/MM/YYYY'),1,2,3,4);
+INSERT INTO VERKAUF VALUES (6,2,TO_DATE('23/05/2020', 'DD/MM/YYYY'),2,5,1,4);
+INSERT INTO VERKAUF VALUES (7,1,TO_DATE('04/04/2020', 'DD/MM/YYYY'),9,8,7,5);
+INSERT INTO VERKAUF VALUES (8,15,TO_DATE('03/09/2021', 'DD/MM/YYYY'),6,7,2,9);
+INSERT INTO VERKAUF VALUES (9,25,TO_DATE('18/10/2019', 'DD/MM/YYYY'),5,2,3,4);
+INSERT INTO VERKAUF VALUES (10,51,TO_DATE('08/02/2022', 'DD/MM/YYYY'),4,7,10,2);

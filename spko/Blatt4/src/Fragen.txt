@@ -1,0 +1,13 @@
+Was an dem vervollständigten Java-Programm ist alles eindeutig prozeduraler Stil?
+
+Lineare Struktur: Der Hauptteil des Programms befindet sich in der main-Methode, die von oben nach unten abgearbeitet wird. Dies reflektiert den prozeduralen Ansatz, bei dem der Fokus auf der Ausführung von Anweisungen in einer bestimmten Reihenfolge liegt.
+
+Verwendung von statischen Methoden: Alle implementierten Funktionen (readLines, removeEmptyLines, removeShortLines, totalLineLengths) sind als statische Methoden deklariert. Im prozeduralen Programmierparadigma werden Funktionen als separate, unabhängige Einheiten betrachtet, die auf Daten arbeiten.
+
+Imperative Programmierung: Die Verwendung von Schleifen (z.B., while, for) und bedingten Anweisungen (z.B., if) zur Steuerung des Programmflusses ist ein charakteristisches Merkmal prozeduraler Programmierung. Diese Strukturen sind in den Methoden readLines, removeEmptyLines, removeShortLines, totalLineLengths vorhanden.
+
+Globale Daten: Die Liste lines ist eine globale Datenstruktur, die von den verschiedenen Methoden des Programms verwendet wird. Im prozeduralen Stil werden Daten oft global gehalten und von verschiedenen Funktionen gemeinsam genutzt.
+
+Niedrige Abstraktionsebene: Die Implementierung verwendet grundlegende Kontrollstrukturen und Schleifen, um die gewünschten Operationen auf den Daten durchzuführen. Es gibt keine Verwendung von objektorientierten Konzepten wie Klassen und Objekten.
+
+Es ist wichtig zu beachten, dass der prozedurale Stil in der objektorientierten Programmiersprache Java aufgrund der Sprachkonstrukte nicht so stark ausgeprägt ist wie in rein prozeduralen Sprachen. Dennoch sind die oben genannten Aspekte charakteristisch für den prozeduralen Programmieransatz im Kontext von Java.

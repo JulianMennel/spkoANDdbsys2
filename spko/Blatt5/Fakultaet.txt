@@ -1,0 +1,6 @@
+fakultaet(0,1).
+fakultaet(N, Result):-
+	N > 0,
+	N1 is N - 1,
+	fakultaet(N1, Result1),
+	Result is N * Result1.

@@ -1,0 +1,4 @@
+PS Z:\spko\Blatt4\src> java Functional.java .\Kafka_Der_Prozess.txt
+result = 450210 (30083 microsec)
+PS Z:\spko\Blatt4\src> java Procedural.java .\Kafka_Der_Prozess.txt
+result = 450210 (13362 microsec)

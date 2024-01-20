@@ -1,0 +1,37 @@
+a)
+db.pers.aggregate([
+{ "$project" : {"name": 1, "gehalt": 1,
+    "vorgesetzter_id" : "$vorgesetzter.$id"} },
+{ $lookup:
+{
+from: "pers",
+localField: "vorgesetzter_id",
+foreignField: "_id",
+as: "vorgesetzter"
+}
+},
+{ "$unwind" : "$vorgesetzter" },
+{ "$project" : {"_id": 0, "name" : 1, "gehalt" : 1,
+"vorgesetzer_name" : "$vorgesetzter.name",
+"vorgesetzer_gehalt" : "$vorgesetzter.gehalt"} },
+{"$match" : { $expr: { $gt: [ "$gehalt" , "$vorgesetzer_gehalt" ] } } },
+])
+
+b)
+db.pers.aggregate([
+{ "$project" : {"gehalt": 1, "abt_id" : "$abteilung.$id"} },
+{ $lookup:
+{
+from: "abt",
+localField: "abt_id",
+foreignField: "_id",
+as: "abteilung"
+}
+},
+{ "$unwind" : "$abteilung" },
+{ "$project" : {"_id": 0, "gehalt" : 1, "ort" : "$abteilung.ort"} },
+{"$group": {"_id": "$ort", "gehaelter" : {"$sum": "$gehalt" }}},
+{"$project" : {"_id": 0, "ort" : "$_id", "gehaelter" : 1} },
+{"$sort" : {"gehaelter" : -1 }},
+{"$limit" : 1}
+])
